@@ -1,3 +1,5 @@
+# Test task for theboats.com
+
 ## Install
 
 1. Clone repository:
