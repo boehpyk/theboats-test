@@ -489,7 +489,7 @@ app.get('*', async function (req, res) {
 		if (context.url)
 			//process redirect through express by redirecting
 			res.redirect(context.status, 'http://' + req.headers.host + context.url);else if (foundPath && foundPath.path == '/404')
-			//if 404 then send our custom 404 page with initial state and meta data
+			//if 404 then send our custom 404 page with initial state and meta data, this is needed for status code 404
 			res.status(404).send(renderFullPage(html, preloadedState, helmetData));else
 			//else send down page with initial state and meta data
 			res.send(renderFullPage(html, preloadedState, helmetData));
@@ -748,7 +748,8 @@ var User = function (_Component) {
                     _react2.default.createElement(
                         'title',
                         null,
-                        'User'
+                        'User ',
+                        this.props.name
                     )
                 ),
                 _react2.default.createElement(

@@ -6292,7 +6292,8 @@ var User = function (_Component) {
                     _react2.default.createElement(
                         'title',
                         null,
-                        'User'
+                        'User ',
+                        this.props.name
                     )
                 ),
                 _react2.default.createElement(
